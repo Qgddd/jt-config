@@ -1,0 +1,37 @@
+server:
+  port: 8091
+  servlet:
+    context-path: /
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/jtdb?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
+    username: root
+    password: root
+  application:
+    name: item-service
+  mvc:         #引入mvn配置
+    view:
+      prefix: /WEB-INF/views/     # /默认代表根目录 src/main/webapp
+      suffix: .jsp
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
+
+#mybatis-plush配置
+mybatis-plus:
+    #别名包  简化类型转化的写法
+  type-aliases-package: com.jt.pojo
+    #加载mybatis的映射文件
+  mapper-locations: classpath:/mappers/*.xml
+    #开启驼峰映射
+  configuration:
+    map-underscore-to-camel-case: true
+
+#引入日志
+logging:
+  level:
+    com.jt.mapper: debug

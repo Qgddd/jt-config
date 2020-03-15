@@ -1,0 +1,20 @@
+server:
+  port: 8092
+spring:
+  application:
+    name: jt-web
+  mvc:         #引入mvn配置
+    view:
+      prefix: /WEB-INF/views/     # /默认代表根目录 src/main/webapp
+      suffix: .jsp
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
+
+  
+ribbon:
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 2
