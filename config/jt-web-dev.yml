@@ -7,6 +7,12 @@ spring:
     view:
       prefix: /WEB-INF/views/     # /默认代表根目录 src/main/webapp
       suffix: .jsp
+  rabbitmq:
+    host: 192.168.64.140
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: /jt
 
 
 eureka:

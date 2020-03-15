@@ -10,6 +10,12 @@ spring:
     password: root
   application:
     name: cart-service
+  rabbitmq:
+    host: 192.168.64.140
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: /jt
 
 eureka:
   client:
