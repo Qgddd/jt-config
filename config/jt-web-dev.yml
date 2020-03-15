@@ -1,10 +1,7 @@
 spring:
   application:
     name: jt-web
-  mvc:         #引入mvn配置
-    view:
-      prefix: /WEB-INF/views/     # /默认代表根目录 src/main/webapp
-      suffix: .jsp
+
   rabbitmq:
     host: 192.168.64.140
     port: 5672

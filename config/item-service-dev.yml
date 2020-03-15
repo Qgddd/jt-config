@@ -4,10 +4,7 @@ server:
 spring:
   application:
     name: item-service
-  mvc:         #引入mvn配置
-    view:
-      prefix: /WEB-INF/views/     # /默认代表根目录 src/main/webapp
-      suffix: .jsp
+
 
 
 eureka:
